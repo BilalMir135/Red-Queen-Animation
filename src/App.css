@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sky {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bg_sky.jpg);
+  background-repeat: repeat-x;
+  background-position: 100% 100%;
+  background-size: auto 100%;
+  height: 50vh;
+  width: 500%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.earth {
+  background: #eb125d
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bg_earth.jpg);
+  background-repeat: repeat-x;
+  background-size: 100% auto;
+  height: 50vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#red-queen-and-alice {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  width: 80%;
+  max-width: 450px;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+#red-queen-and-alice:before {
+  content: ' ';
+  display: block;
+  padding-top: 87%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#red-queen-and-alice img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
