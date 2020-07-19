@@ -1,11 +1,11 @@
 import React from 'react';
-import Background from './components/Background';
+import Animation from './components/Animation';
 import './App.css';
 
 function App() {
   return (
     <div>
-      <Background />
+      <Animation />
     </div>
   );
 }
